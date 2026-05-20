@@ -61,6 +61,13 @@ body {
     background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' fill='none' stroke='%23ae00ff' stroke-width='4' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M 30 5 L 5 5 L 5 30 M 5 70 L 5 95 L 30 95 M 70 95 L 95 95 L 95 70 M 95 30 L 95 5 L 70 5' /%3E%3C/svg%3E");
 }
 
+body:not(.custom-cursor-active) .cursorTochka,
+body:not(.custom-cursor-active) .cursorOutline {
+    display: none;
+    cursor: auto;
+}
+
+
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -333,14 +340,22 @@ footer {
 }
 
 @media (max-width: 768px) {
+    .aboutText {
+        font-size: 30px;
+    }
+    .teamText {
+        font-size: 30px;
+    }
     .navLinks {
-        display: none;
+        li {
+            display: none;
+        }
     }
     .navbar {
-        justify-content: center;
+        padding: 20px 40px;
     }
     .hero h1 {
-        font-size: 45px;
+        font-size: 35px;
     }
     .cursorOutline {
         display: none;
